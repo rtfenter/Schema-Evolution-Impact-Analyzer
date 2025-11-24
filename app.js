@@ -397,7 +397,7 @@ function renderDiffCard(scenario, diffCard) {
 
   const title = document.createElement("p");
   title.className = "diff-title";
-  title.textContent = `Schema Diff: v1 → v2`;
+  title.textContent = `Schema Change Summary: v1 → v2`;
 
   const meta = document.createElement("p");
   meta.className = "diff-meta";
@@ -598,7 +598,7 @@ function renderDefaultDetails(scenario, detailsCard, analysis) {
 
   const p = document.createElement("p");
   p.textContent =
-    "Use the schema diff to understand what changed between v1 and v2, then click nodes in the dependency map to see which fields break each consumer and where coordination is required.";
+    "Use the schema change summmary to understand what changed between v1 and v2, then click nodes in the dependency map to see which fields break each consumer and where coordination is required.";
   section.appendChild(p);
 
   detailsCard.appendChild(section);
