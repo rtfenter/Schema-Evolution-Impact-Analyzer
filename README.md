@@ -40,7 +40,7 @@ It turns schema evolution from a guessing game into a clear, visual impact map.
 
 The first version will include:
 
-- **Schema Diff Viewer** – shows what changed between v1 and v2 (added, removed, repurposed fields)  
+- **Schema Change Summary Viewer (Diff) ** – shows what changed between v1 and v2 (added, removed, repurposed fields)  
 - **Consumer Dependency Map** – interactive graph of all downstream services and how they consume affected fields  
 - **Field Usage Matrix** – for each service, display whether a field is read, required, transformed, validated, or ignored  
 - **Breaking Change Detector** – flags type changes, removed fields, enum tightening, and invariant shifts  
