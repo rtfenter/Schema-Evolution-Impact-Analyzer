@@ -38,7 +38,7 @@ It turns schema evolution from a guessing game into a clear, visual impact map.
 
 ## Features (MVP)
 
-The first version will include:
+The prototype will include:
 
 - **Schema Change Summary Viewer (Diff) ** – shows what changed between v1 and v2 (added, removed, repurposed fields)  
 - **Consumer Dependency Map** – interactive graph of all downstream services and how they consume affected fields  
@@ -165,13 +165,13 @@ https://github.com/rtfenter/Systems-of-Trust-Series
 ## Status
 
 MVP is implemented and active.  
-The first version will focus on **structural and behavioral change detection**, providing a clear impact graph for v1 → v2 changes without becoming a full enterprise schema registry.
+This prototype will focus on **structural and behavioral change detection**, providing a clear impact graph for v1 → v2 changes without becoming a full enterprise schema registry.
 
 ---
 
 ## Local Use
 
-Everything will run client-side.
+Everything runs client-side.
 
 To run locally (once the prototype is implemented):
 
