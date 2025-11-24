@@ -53,7 +53,8 @@ This tool is intentionally minimal and aimed at conceptual clarity — not repla
 ---
 
 ## Demo Screenshot
-<img width="2696" height="1556" alt="Screenshot — Schema Evolution Impact Analyzer" src="https://github.com/user-attachments/assets/placeholder-schema-evolution-impact.png" />
+<img width="2804" height="2184" alt="Screenshot 2025-11-24 at 08-47-36 Schema Evolution Impact Analyzer" src="https://github.com/user-attachments/assets/25ca3f40-67f5-4248-90b5-9cbadca42625" />
+
 
 ---
 
@@ -163,7 +164,7 @@ https://github.com/rtfenter/Systems-of-Trust-Series
 
 ## Status
 
-MVP planned and in progress.  
+MVP is implemented and active.  
 The first version will focus on **structural and behavioral change detection**, providing a clear impact graph for v1 → v2 changes without becoming a full enterprise schema registry.
 
 ---
