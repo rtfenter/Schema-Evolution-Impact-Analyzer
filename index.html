@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Schema Evolution Impact Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1>Schema Evolution Impact Analyzer</h1>
+      <p class="tagline">
+        Visualize how schema v2 changes ripple through downstream services and where breaking changes land.
+      </p>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- LEFT PANEL: CONTROLS + SUMMARY -->
+    <section class="panel panel-controls">
+      <div class="panel-header">
+        <h2>Schema &amp; Impact Summary</h2>
+      </div>
+
+      <div class="field">
+        <label for="scenario-select">Schema Change Scenario</label>
+        <select id="scenario-select" class="select">
+          <!-- Options injected by app.js -->
+        </select>
+      </div>
+
+      <p id="scenario-description" class="concept-description">
+        Select a v1 → v2 schema change to see which downstream services and pipelines it impacts.
+      </p>
+
+      <div id="summary" class="summary">
+        <div id="summary-badge" class="summary-badge summary-badge-idle">
+          No schema selected yet.
+        </div>
+      </div>
+
+      <div class="legend">
+        <h3>Impact Legend</h3>
+        <ul>
+          <li>
+            <span class="legend-dot legend-low"></span>
+            Low impact – consumers still compatible
+          </li>
+          <li>
+            <span class="legend-dot legend-medium"></span>
+            Medium impact – coordination recommended
+          </li>
+          <li>
+            <span class="legend-dot legend-high"></span>
+            High impact – breaking changes for one or more consumers
+          </li>
+        </ul>
+      </div>
+
+      <div class="notes-card">
+        <h3>How to Read This Analyzer</h3>
+        <p>
+          The diff card shows what changed between v1 and v2. The dependency paths show
+          how events flow from producers through pipelines into downstream consumers.
+        </p>
+        <p>
+          Nodes are color-coded by impact. Click any node to see how v2 affects that service
+          or pipeline and which fields need updates.
+        </p>
+      </div>
+    </section>
+
+    <!-- RIGHT PANEL: DIFF + DEPENDENCY MAP + DETAILS -->
+    <section class="panel panel-map">
+      <div class="panel-header">
+        <h2>Schema Impact Map</h2>
+      </div>
+
+      <div id="diff-card" class="diff-card">
+        <p class="map-empty">
+          Select a schema change on the left to see the v1 → v2 diff.
+        </p>
+      </div>
+
+      <div id="dependency-map" class="dependency-map-container">
+        <p class="map-empty">
+          Select a schema change to render the downstream dependency paths.
+        </p>
+      </div>
+
+      <div id="details-card" class="details-card">
+        <h3>Impact Details</h3>
+        <p class="details-empty">
+          Click any node in the dependency map to see how v2 affects that service, including
+          breaking fields and coordination notes.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>
+      Part of the
+      <a href="https://github.com/rtfenter/Systems-of-Trust-Series" target="_blank" rel="noreferrer">
+        Systems of Trust Series
+      </a>.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
