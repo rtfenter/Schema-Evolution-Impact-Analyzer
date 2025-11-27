@@ -40,7 +40,7 @@ It turns schema evolution from a guessing game into a clear, visual impact map.
 
 The prototype will include:
 
-- **Schema Change Summary Viewer (Diff) ** – shows what changed between v1 and v2 (added, removed, repurposed fields)  
+- **Schema Change Summary Viewer (Diff)** – shows what changed between v1 and v2 (added, removed, repurposed fields)  
 - **Consumer Dependency Map** – interactive graph of all downstream services and how they consume affected fields  
 - **Field Usage Matrix** – for each service, display whether a field is read, required, transformed, validated, or ignored  
 - **Breaking Change Detector** – flags type changes, removed fields, enum tightening, and invariant shifts  
@@ -55,11 +55,11 @@ This tool is intentionally minimal and aimed at conceptual clarity — not repla
 ## Demo Screenshot
 <img width="2804" height="2184" alt="Screenshot 2025-11-24 at 08-47-36 Schema Evolution Impact Analyzer" src="https://github.com/user-attachments/assets/25ca3f40-67f5-4248-90b5-9cbadca42625" />
 
-
 ---
 
-## Schema Evolution Flow Diagram
+## Evolution Impact Flow Diagram
 
+```
     Schema v1 (canonical)
            |
     [Diff Engine]
@@ -79,6 +79,7 @@ This tool is intentionally minimal and aimed at conceptual clarity — not repla
     Pipelines / Warehouses / APIs
     (breakage propagates through joins,
      transformations, and reporting)
+```
 
 The analyzer maps **what changed** → **who it breaks** → **what needs coordination**.
 
@@ -168,7 +169,6 @@ MVP is implemented and active.
 This prototype will focus on **structural and behavioral change detection**, providing a clear impact graph for v1 → v2 changes without becoming a full enterprise schema registry.
 
 ---
-
 ## Local Use
 
 Everything runs client-side.
