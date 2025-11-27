@@ -38,7 +38,7 @@ It turns schema evolution from a guessing game into a clear, visual impact map.
 
 ## Features (MVP)
 
-The prototype will include:
+This prototype includes:
 
 - **Schema Change Summary Viewer (Diff)** – shows what changed between v1 and v2 (added, removed, repurposed fields)  
 - **Consumer Dependency Map** – interactive graph of all downstream services and how they consume affected fields  
